@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="number" id="age" placeholder="Enter your age">
+    <input type="number" id="date" placeholder="Enter your birth year">
+
+    <button onclick="match()">Check if ur valid or not </button>
+    <p id="show">If your valid u get true,else it shows false</p>
+    <script>
+        function match(){
+            let agee = document.getElementById('age').value;
+            let datee = document.getElementById('date').value;
+
+            let Age = parseInt(agee);
+            let Date = parseInt(datee);
+
+            const res = Age>=18 && Date<=2006
+            
+            const year = new Date().getFullyear();
+
+            const valid = year-Date
+            const fnl = Age == valid
+
+            document.getElementById('show').innerHTML="Result:"+fnl
+        }
+        
+    </script> -->
+
+    
+<script>
+    let age = +prompt("Enter ur age");
+    let date = +prompt("Enter ur birth year");
+
+    const res = age>=18 && date<=2006
+
+    const year = new Date().getFullYear();
+
+    const valid = year - date
+    alert(valid)
+    const fnl = age == valid
+
+    alert("if u get true ur valid else ur not a valid user: "+fnl)
+</script>
+    
+</body>
+</html>
