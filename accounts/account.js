@@ -11,7 +11,6 @@ function acc() {
     else {
         alert("Incorrect Pin. Please try again.");
 
-        
     }
     
 }
@@ -29,7 +28,6 @@ function acc1() {
     else {
         alert("Incorrect Pin. Please try again.");
 
-        
     }
     
 }
