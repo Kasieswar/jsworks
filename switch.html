@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let x = +prompt("Enter first number")
+        let y = +prompt("Enter second number")
+
+        let ope = prompt("Give any of these operators : + - * / %")
+
+        switch (ope) {
+            case "+":
+                alert(x+y)
+                break;
+            
+            case "-":
+                alert(x-y)
+                break;
+
+            case "*":
+                alert(x*y)
+                break;
+
+            case "/":
+                alert(x/y)
+                break;
+
+            case "%":
+                alert(x%y)
+                break;
+
+            default:
+                alert("Enter valid numbers")
+                break;
+        }
+    </script> -->
+
+    <input type="number" placeholder="Enter first number" id="fn">
+    <input type="number" placeholder="Enter Second number" id="sn">
+
+    <button onclick="oper()">Click</button>
+
+    <p id="show"></p>
+    <script>
+        function oper(){
+            let x = document.getElementById('fn').value;
+            let y = document.getElementById('sn').value;
+
+            const xnum = parseInt(x)
+            const ynum = parseInt(y)
+
+            let ope = prompt("Select the operators to perform: + - * / %")
+
+            switch (ope) {
+                case "+":
+                    document.getElementById('show').innerHTML = "Result : "+ (xnum+ynum)
+                    break;
+            
+                case "-":
+                    document.getElementById('show').innerHTML = "Result : "+ (xnum-ynum)
+                    break;
+
+                case "*":
+                    document.getElementById('show').innerHTML = "Result : "+ (xnum*ynum)
+                    break;
+
+                case "/":
+                    document.getElementById('show').innerHTML = "Result : "+ (xnum/ynum)
+                    break;
+
+                case "%":
+                    document.getElementById('show').innerHTML = "Result : "+ (xnum%ynum)
+                    break;
+                default:
+                    alert("Please Enter available operators")
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

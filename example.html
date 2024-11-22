@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+    }
+</style>
+<body>
+    <table style="width:100%">
+        <tr>
+            <th>S.No</th>
+            <th>Student Name</th>
+            <th>Telugu</th>
+            <th>Hindi</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Social</th>
+            <th></th>
+            <th>Total Marks</th>
+            <th>Pass/Fail</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="sno" placeholder="Enter S.No"></td>
+            <td><input type="text" id="name" placeholder="Enter Student Name"></td>
+            <td><input type="number" id="tel" placeholder="Enter Telugu Marks"></td>
+            <td><input type="number" id="hin" placeholder="Enter Hindi Marks"></td>
+            <td><input type="number" id="eng" placeholder="Enter English Marks"></td>
+            <td><input type="number" id="math" placeholder="Enter Maths Marks"></td>
+            <td><input type="number" id="sci" placeholder="Enter Science Marks"></td>
+            <td><input type="number" id="soc" placeholder="Enter Social Marks"></td>
+            <td><button onclick="result()">Submit</button></td>
+            <td><p id="show">Total Marks</p></td>
+            <td><p id="pass">Pass/Fail</p></td>
+        </tr>
+    </table>
+
+    <script>
+        function result(){
+            let sno = document.getElementById('sno').value;
+            let name = document.getElementById('name').value;
+            let tel = document.getElementById('tel').value;
+            let hin = document.getElementById('hin').value;
+            let eng = document.getElementById('eng').value;
+            let math = document.getElementById('math').value;
+            let sci = document.getElementById('sci').value;
+            let soc = document.getElementById('soc').value;
+
+            // Convert marks to integers
+            let snomark = parseInt(sno);
+            let telmark = parseInt(tel);
+            let hinmark = parseInt(hin);
+            let engmark = parseInt(eng);
+            let mathmark = parseInt(math);
+            let scimark = parseInt(sci);
+            let socmark = parseInt(soc);
+
+            
+            
+            let telmarks =  telmark >= 35 && telmark <= 100;
+            let hinmarks =  hinmark >= 35 && hinmark <= 100;
+            let engmarks =  engmark >= 35 && engmark <= 100;
+            let mathmarks =  mathmark >= 35 && mathmark <= 100;
+            let scimarks =  scimark >= 35 && scimark <= 100;
+            let socmarks =  socmark >= 35 && socmark <= 100;
+
+        
+            const totalMarks = telmark + hinmark + engmark + mathmark + scimark + socmark;
+            const valid = telmarks && hinmarks && engmarks && mathmarks && scimarks && socmarks
+                if (valid && (totalMarks >= 550)) {
+                    alert("you got A grade")
+                    }
+
+                else if (valid && (totalMarks >= 350)) {
+                    alert("you got B grade")
+                    }
+
+                else if (valid && (totalMarks >= 250)) {
+                    alert("you got c grade")
+                    }
+
+                else{
+                    alert("fail")
+                }
+        
+            document.getElementById('show').innerHTML = totalMarks;
+        
+            if(valid==true){
+                document.getElementById('pass').innerHTML= "Pass";
+            }
+            else{
+                document.getElementById('pass').innerHTML= "fail";
+            }
+        }
+    </script>
+</body>
+</html>

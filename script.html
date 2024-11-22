@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            height: auto;
+            width: 50px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="number" id="num1" placeholder="Enter First number">
+    <input type="number" id="num2" placeholder="Enter Second number">
+
+    <button onclick="sum()"> + </button>
+    <button onclick="sub()"> - </button>
+    <button onclick="mul()"> * </button>
+    <button onclick="div()"> / </button>
+    <button onclick="mod()"> % </button>
+
+    <p id="result">Addition result:</p>
+    
+
+    <script>
+        // let x = +prompt("Enter first value")
+        // let y = +prompt("Enter second value")
+
+        // let xnum=parseInt(x)
+        // let ynum=parseInt(y)
+
+        // const z=x+y
+        // document.write(z)
+
+        function sum() {
+            let x = document.getElementById('num1').value;
+            let y = document.getElementById('num2').value;
+
+            let xnum = parseInt(x);
+            let ynum = parseInt(y);
+
+            const z = xnum+ynum
+
+            // alert(z)
+            // document.write(z)
+            // console.log(z)
+
+            document.getElementById('result').innerHTML="Addition result is:"+z
+
+
+        }
+
+        function sub() {
+            let x = document.getElementById('num1').value;
+            let y = document.getElementById('num2').value;
+
+            let xnum = parseInt(x);
+            let ynum = parseInt(y);
+
+            const z = xnum-ynum
+
+            // alert(z)
+            // document.write(z)
+            // console.log(z)
+
+            document.getElementById('result').innerHTML="Subtraction result is:"+z
+
+
+        }
+        function mul() {
+            let x = document.getElementById('num1').value;
+            let y = document.getElementById('num2').value;
+
+            let xnum = parseInt(x);
+            let ynum = parseInt(y);
+
+            const z = xnum*ynum
+
+            // alert(z)
+            // document.write(z)
+            // console.log(z)
+
+            document.getElementById('result').innerHTML="Multiplication result is:"+z
+
+
+        }
+        function div() {
+            let x = document.getElementById('num1').value;
+            let y = document.getElementById('num2').value;
+
+            let xnum = parseInt(x);
+            let ynum = parseInt(y);
+
+            const z = xnum/ynum
+
+            // alert(z)
+            // document.write(z)
+            // console.log(z)
+
+            document.getElementById('result').innerHTML="Division result is:"+z
+
+
+        }
+        function mod() {
+            let x = document.getElementById('num1').value;
+            let y = document.getElementById('num2').value;
+
+            let xnum = parseInt(x);
+            let ynum = parseInt(y);
+
+            const z = xnum%ynum
+
+            // alert(z)
+            // document.write(z)
+            // console.log(z)
+
+            document.getElementById('result').innerHTML="Remainder is:"+z
+
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>
