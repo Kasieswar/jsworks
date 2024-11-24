@@ -15,7 +15,7 @@ function acc() {
     
 }
 
-function acc1() {
+function accone() {
     let value = +prompt("Enter 4 digits Pin   hint: 9032")
     const pin = 9032
     
@@ -23,7 +23,7 @@ function acc1() {
 
     if (valid) {
         alert("Access granted.");
-        window.location.href="accountdet.html"
+        window.location.href="credit.html"
     } 
     else {
         alert("Incorrect Pin. Please try again.");
@@ -32,7 +32,7 @@ function acc1() {
     
 }
 
-function acc2() {
+function acctwo() {
     let value = +prompt("Enter 4 digits Pin   hint: 9032")
     const pin = 9032
     
@@ -40,7 +40,7 @@ function acc2() {
 
     if (valid) {
         alert("Access granted.");
-        window.location.href="accountdet.html"
+        window.location.href="credit.html"
     } 
     else {
         alert("Incorrect Pin. Please try again.");
@@ -49,3 +49,10 @@ function acc2() {
     }
     
 }
+
+
+// Retrieve the bank balance from localStorage
+let bankBalance = parseFloat(localStorage.getItem('bankBalance')) || 0.00;
+
+// Display the current balance
+document.getElementById("current-balance").textContent = bankBalance.toFixed(2);
