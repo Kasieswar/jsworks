@@ -23,7 +23,8 @@ body {
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.542);
+
 }
 
 header {
@@ -45,13 +46,24 @@ input{
     border: 1px solid #ccc;
     background-color: transparent;
     color: white;
+    margin: 4%;
+}
+
+input:hover{
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
 .anchor{
     background-color: black;
     color: whitesmoke;
-    height: 30px;
+    height: 40px;
     border-radius: 10px;
     text-decoration: none;
-    
+    padding: 2%;
+}
+
+.dbt{
+    width: 80%;
+    padding-top: 5%;
+    text-align: right;
 }

@@ -47,9 +47,3 @@ function acctwo() {
 }
     
 }
-
- // Retrieve the bank balance from localStorage
-// let bankBalance = parseFloat(localStorage.getItem('bankBalance')) || 0.00;
-
-// Display the current balance
-// document.getElementById("current-balance").textContent = bankBalance.toFixed(2);

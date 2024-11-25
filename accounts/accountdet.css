@@ -7,10 +7,13 @@
     width: 600px;
     border: 1px solid;
     border-radius: 10px;
-    padding: 5%;
-    margin: 5% auto;
+    padding: 3%;
+    margin: 2% auto;
     line-height: 2;
-    background-color: rgba(255, 166, 0, 0.571);;
+    background-color: rgba(255, 166, 0, 0.571);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.542);
+
+
 }
 
 .det h1{
@@ -25,9 +28,11 @@
 .det a{
     border-radius: 2px;
     background-color: white;
-    margin: 20px; 
+    margin: 10px;
+    padding: 2%; 
 }
 
 .det a:hover{
-    opacity: 0.8;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.542);
+
 }
