@@ -13,8 +13,8 @@
 }
 
 .detailsone{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border: 1px solid black;
     border-radius: 5%;
     display: flex;
@@ -22,7 +22,8 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 166, 0, 0.571);
-    
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.542);
+
 }
 
 h3,p{
@@ -37,29 +38,32 @@ button{
 }
 
 button:hover{
-    opacity: 0.8;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .detailstwo{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border: 1px solid black;
     border-radius: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.542);
     background-color: rgba(255, 166, 0, 0.571);
 }
 
 .detailsthree{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border: 1px solid black;
     border-radius: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.542);
     background-color: rgba(255, 166, 0, 0.571);
 }

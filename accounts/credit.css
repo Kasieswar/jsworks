@@ -36,19 +36,6 @@ h1 {
     font-size: 2em;
 }
 
-.input-group{
-    margin-bottom: 20px;
-}
-
-#amount{
-	background-color: transparent;
-}
-
-label {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-}
-
 input{
     width: 100%;
     padding: 10px;
@@ -56,17 +43,15 @@ input{
     font-size: 1em;
     border-radius: 15px;
     border: 1px solid #ccc;
-}
-
-button {
-    padding: 10px;
+    background-color: transparent;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
 }
 
-button:hover {
-	opacity: 0.8;
+.anchor{
+    background-color: black;
+    color: whitesmoke;
+    height: 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    
 }

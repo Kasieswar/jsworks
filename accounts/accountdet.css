@@ -3,17 +3,14 @@
     padding: 0;
 }
 
-.head{
-    background-color: rgb(255, 166, 0);
-}
-
 .det{
     width: 600px;
     border: 1px solid;
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
+    padding: 5%;
+    margin: 5% auto;
     line-height: 2;
+    background-color: rgba(255, 166, 0, 0.571);;
 }
 
 .det h1{
@@ -23,4 +20,14 @@
 
 .det p{
     margin: 10px;
+}
+
+.det a{
+    border-radius: 2px;
+    background-color: white;
+    margin: 20px; 
+}
+
+.det a:hover{
+    opacity: 0.8;
 }

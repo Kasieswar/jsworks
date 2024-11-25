@@ -40,19 +40,16 @@ function acctwo() {
 
     if (valid) {
         alert("Access granted.");
-        window.location.href="credit.html"
+        window.location.href="debit.html"
     } 
     else {
         alert("Incorrect Pin. Please try again.");
-
-        
-    }
+}
     
 }
 
-
-// Retrieve the bank balance from localStorage
-let bankBalance = parseFloat(localStorage.getItem('bankBalance')) || 0.00;
+ // Retrieve the bank balance from localStorage
+// let bankBalance = parseFloat(localStorage.getItem('bankBalance')) || 0.00;
 
 // Display the current balance
-document.getElementById("current-balance").textContent = bankBalance.toFixed(2);
+// document.getElementById("current-balance").textContent = bankBalance.toFixed(2);
