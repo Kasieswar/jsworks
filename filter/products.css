@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+header{
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1%;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+header a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.card{
+    margin-bottom: 20px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 250px;
+}
+
+.card-body{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-text{
+    font-size: 0.9rem;
+}
+
+.btn{
+    margin-top: auto;
+}
