@@ -3,3 +3,24 @@
     margin: 0;
 }
 
+header{
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1%;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+header a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
