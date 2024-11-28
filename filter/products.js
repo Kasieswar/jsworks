@@ -106,7 +106,7 @@ function renderProducts() {
     products.forEach((product, index) => {
         const productCard = `
             <div class="col-md-3">
-                <div class="card">
+                <div class="card" data-value="${product.price}">
                     <img src="${product.image}" class="card-img-top" alt="${product.title}">
                     <div class="card-body bg-dark text-light">
                         <h5 class="card-title">${product.title}</h5>
@@ -126,6 +126,28 @@ function renderProducts() {
 // Initialize the products page
 renderProducts();
 
+// Filter Function
+function filter() {
+    const minPrice = parseInt(document.getElementById('min').value) || 0;
+    const maxPrice = parseInt(document.getElementById('max').value) || Infinity;
+
+    // Select all product cards
+    const cards = document.querySelectorAll('.card');
+
+    // Iterate through each card and apply filter
+    cards.forEach(card => {
+        const price = parseInt(card.getAttribute('data-value'));
+
+        // Use `closest` to manipulate the parent column
+        if (price >= minPrice && price <= maxPrice) {
+            card.closest('.col-md-3').style.display = 'block'; // Show product
+        } 
+        else {
+            card.closest('.col-md-3').style.display = 'none'; // Hide product
+        }
+    });
+}
+
 // Function to add a product to the cart
 function addToCart(index) {
     const product = products[index];
@@ -135,51 +157,3 @@ function addToCart(index) {
     alert(`${product.title} added to cart!`);
 }
 
-//Filter
-
-// document.querySelectorAll('.card').forEach(function (ele) {
-//     document.querySelector('.filter').addEventListener('click', function () {
-//         let minval = parseInt(document.getElementById('min').value);
-//         let maxval = parseInt(document.getElementById('max').value);
-
-//         let dataitems = ele.getAttribute('data-value');
-
-//         if(dataitems >= minval && dataitems <= maxval){
-//             ele.style.display="block"
-//         }
-//         else{
-//             ele.style.display="none"
-//         }
-//     })
-// })
-
-function filter() {
-    const minPrice = parseFloat(document.getElementById('min').value);
-    const maxPrice = parseFloat(document.getElementById('max').value);
-
-    if (!isNaN(minPrice) && !isNaN(maxPrice)) {
-        const filteredProducts = products.filter(product => product.price >= minPrice && product.price <= maxPrice);
-        renderProducts(filteredProducts);
-    } else {
-        alert("Please enter valid price values.");
-    }
-}
-
-// function filter() {
-//     const min = parseInt(document.getElementById('min').value) || 0;
-//     const max = parseInt(document.getElementById('max').value) || Infinity;
-
-//     const productcards = document.querySelectorAll('.card');
-
-//     productcards.forEach(card => {
-//         const pricetext = card.querySelector('.card-text:nth-child(4)').innerText;
-//         const price = parseInt(pricetext.replace('Price:₹',).trim());
-
-//         if (price >= min && price <=max){
-//             card.closest('.col-md-3').style.display='block';
-//         }
-//         else{
-//             card.closest('.col-md-3').style.display="none";
-//         }
-//     })
-// }
