@@ -140,10 +140,10 @@ function filter() {
 
         // Use `closest` to manipulate the parent column
         if (price >= minPrice && price <= maxPrice) {
-            card.closest('.col-md-3').style.display = 'block'; // Show product
+            card.closest('.col-md-3').style.display = 'block';
         } 
         else {
-            card.closest('.col-md-3').style.display = 'none'; // Hide product
+            card.closest('.col-md-3').style.display = 'none'; 
         }
     });
 }
