@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
+    <style>
+        #main{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .items{
+            margin: 1%;
+            background-color: aqua;
+            padding: 1%;
+            height: 200px;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
-    <div class="main"></div>
+    <div id="main"></div>
 
     <script>
         async function data() {
-            const url = 
+            const url = await fetch('https://dummyjson.com/todos');
+            let data = await url.json()
+            let myData = data.todos
+            console.log(myData)
+
+            let Mytodo = myData.map((i)=>{
+                return(
+                    `
+                    <div class="items">
+                        <p>Id: ${i.id}</p>
+                        <p>Todo: ${i.todo}</p>
+                        <p>Completed: ${i.completed}</p>
+                        <p>UserID: ${i.userId}</p>
+
+                    </div>
+                    `
+                )
+            }).join("")
+            document.getElementById('main').innerHTML = Mytodo
         }
+        data()
     </script>
 </body>
 </html>
